@@ -1,4 +1,3 @@
-//  Copyright 2005-2017 Landis-II-Foundation
 //  Authors:  Robert M. Scheller
 
 using Landis.Core;
@@ -21,7 +20,6 @@ namespace Landis.Extension.Output.BiomassCommunity
 
         private IInputParameters parameters;
         private static ICore modelCore;
-        //private string outputMapName = "output-communities\\output-community-{timestep}.img";
         private string outputMapName = "output-community-{timestep}.img";
         public static StreamWriter CommunityLog; 
         public static StreamWriter CommunityCsv;
