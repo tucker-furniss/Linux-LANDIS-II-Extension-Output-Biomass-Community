@@ -114,8 +114,9 @@ namespace Landis.Extension.Output.BiomassCommunity
                     CommunityLog.Write("{0} ", species_cohort.Species.Name);
                     foreach (ICohort cohort in species_cohort)
                     {
+                        if(cohort.Biomass > 0)
                         //      * SAVE FOR LATER, summarize every community to nearest 25 g Biomass
-                        CommunityLog.Write("{0} ({1}) ", cohort.Age, Math.Max(cohort.Biomass, 1));
+                            CommunityLog.Write("{0} ({1}) ", cohort.Age, cohort.Biomass);
                     }
                     CommunityLog.WriteLine();
                 }
