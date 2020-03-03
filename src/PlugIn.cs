@@ -111,12 +111,18 @@ namespace Landis.Extension.Output.BiomassCommunity
 
                 foreach (ISpeciesCohorts species_cohort in SiteVars.Cohorts[site])
                 {
-                    CommunityLog.Write("{0} ", species_cohort.Species.Name);
+                    bool firstCohort = true;  // first in the list
                     foreach (ICohort cohort in species_cohort)
                     {
-                        if(cohort.Biomass > 0)
-                        //      * SAVE FOR LATER, summarize every community to nearest 25 g Biomass
+                        if (cohort.Biomass > 0)
+                        {
+                            if(firstCohort)  // first cohort > 0 biomass
+                            {
+                                CommunityLog.Write("{0} ", species_cohort.Species.Name);
+                                firstCohort = false;
+                            }
                             CommunityLog.Write("{0} ({1}) ", cohort.Age, cohort.Biomass);
+                        }
                     }
                     CommunityLog.WriteLine();
                 }
