@@ -1,12 +1,12 @@
 ; LANDIS-II Extension infomation
 #define CoreRelease "LANDIS-II-V7"
 #define ExtensionName "Output Biomass Community"
-#define AppVersion "2.0.1"
+#define AppVersion "2.0.2"
 #define AppPublisher "LANDIS-II Foundation"
 #define AppURL "http://www.landis-ii.org/"
 
 ; Build directory
-#define BuildDir "..\..\src\bin\Release\netstandard2.0"
+#define BuildDir "..\..\src\bin\Debug\netstandard2.0"
 
 ; LANDIS-II installation directories
 #define ExtDir "C:\Program Files\LANDIS-II-v7\extensions"
