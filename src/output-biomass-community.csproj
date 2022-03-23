@@ -23,6 +23,10 @@
     <PackageLicenseUrl>https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-Community/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>http://www.landis-ii.org</PackageProjectUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\build\extensions</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,19 +35,19 @@
 
   <ItemGroup>
     <Reference Include="Landis.Library.AgeOnlyCohorts-v3">
-      <HintPath>lib\Landis.Library.AgeOnlyCohorts-v3.dll</HintPath>
+      <HintPath>..\..\build\extensions\Landis.Library.AgeOnlyCohorts-v3.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Biomass-v2">
-      <HintPath>lib\Landis.Library.Biomass-v2.dll</HintPath>
+      <HintPath>..\..\build\extensions\Landis.Library.Biomass-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.BiomassCohorts-v3">
-      <HintPath>lib\Landis.Library.BiomassCohorts-v3.dll</HintPath>
+      <HintPath>..\..\build\extensions\Landis.Library.BiomassCohorts-v3.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Cohorts-v2">
-      <HintPath>lib\Landis.Library.Cohorts-v2.dll</HintPath>
+      <HintPath>..\..\build\extensions\Landis.Library.Cohorts-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Metadata-v2">
-      <HintPath>lib\Landis.Library.Metadata-v2.dll</HintPath>
+      <HintPath>..\..\build\extensions\Landis.Library.Metadata-v2.dll</HintPath>
     </Reference>
   </ItemGroup>
 
